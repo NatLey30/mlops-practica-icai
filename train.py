@@ -13,8 +13,8 @@ import mlflow.sklearn
 # X = iris.data
 # y = iris.target
 df = pd.read_csv("data/iris_dataset.csv")
-X = df["feature_1"].values
-y = df["feature_2"].values
+X = df[" feature_1"].values
+y = df[" feature_2"].values
 
 # Iniciar un experimento de MLflow
 with mlflow.start_run():
