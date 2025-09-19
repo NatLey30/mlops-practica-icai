@@ -12,7 +12,7 @@ import mlflow.sklearn
 # iris = datasets.load_iris()
 # X = iris.data
 # y = iris.target
-df = pd.read_csv("data/iris.csv")
+df = pd.read_csv("data/iris_dataset.csv")
 X = df["feature_1"].values
 y = df["feature_2"].values
 
