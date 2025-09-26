@@ -1,2 +1,2 @@
 train:
-  n_estimators: 150
+  n_estimators: 100
