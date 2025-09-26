@@ -10,7 +10,6 @@ import mlflow.sklearn
 import matplotlib.pyplot as plt
 import seaborn as sns
 import argparse
-import dagshub
 import json
 
 
