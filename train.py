@@ -55,3 +55,5 @@ with mlflow.start_run():
     plt.savefig('confusion_matrix.png')
     print("Matriz de confusión guardada como 'confusion_matrix.png'")
     # --- Fin de la sección de Reporte ---
+    # Guardar el artifacto en MLFlow remoto
+    mlflow.log_artifact("confusion_matrix.png")
