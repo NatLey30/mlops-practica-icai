@@ -11,8 +11,8 @@ spec:
       app: mlops-api
   template:
     metadata:
-    labels:
-    app: mlops-api
+      labels:
+        app: mlops-api
   spec:
     containers:
     - name: mlops-api
