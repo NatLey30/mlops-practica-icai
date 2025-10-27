@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: mlops-web
-        image: gcr.io/nley30/mlops-web:latest
+        image: gcr.io/natley30/mlops-web:latest
         ports:
         - containerPort: 8501
         env:
