@@ -101,7 +101,7 @@ jobs:
       # 1. Construir la imagen de la WEB usando Dockerfile.web
       # 2. Subir la imagen de la WEB a GCR
         run: |
-          docker build -t gcr.io/${{ vars.GCP_PROJECT_ID }}/mlops-web:latest-f Dockerfile.web .
+          docker build -t gcr.io/${{ vars.GCP_PROJECT_ID }}/mlops-web:latest -f Dockerfile.web .
           docker push gcr.io/${{ vars.GCP_PROJECT_ID }}/mlops-web:latest
       - name: Deploy to GKE
       # Despliegue de la API y de la Web
