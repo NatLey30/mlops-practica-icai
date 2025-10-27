@@ -19,6 +19,6 @@ spec:
         image: gcr.io/nley30/mlops-web:latest
         ports:
         - containerPort: 8501
-          env:
+        env:
         - name: API_URL
           value: http://mlops-api-service:5000/predict # <--- Conexión al servicio interno de la API
