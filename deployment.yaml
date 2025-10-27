@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: mlops-api
-          image: gcr.io/helical-clock-476106-t2/mlops-api:latest 
+          image: gcr.io/nley30/mlops-api:latest 
           ports:
           - containerPort: 5000
