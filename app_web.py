@@ -14,14 +14,15 @@ petal_length = st.slider('Longitud del pétalo (cm)', 0.0, 10.0, 4.0)
 petal_width = st.slider('Ancho del pétalo (cm)', 0.0, 10.0, 1.0)
 # Botón para hacer la predicción
 if st.button('Obtener Predicción'):
+    st.title('Obteniendo Predicción')
     # Crear los datos en formato JSON
     features = [sepal_length, sepal_width, petal_length, petal_width]
     payload = {'features': features}
     # URL de la API de predicción (cambia esta URL si la API no está en esa url)
     api_url = os.environ.get('API_URL')
     # api_url = 'http://localhost:5000/predict'
-    st.write(f'URL de API usada: {api_url}')
     try:
+        st.title('A')
         # Enviar la petición a la API
         response = requests.post(api_url, data=json.dumps(payload),
         headers={'Content-Type': 'application/json'})
