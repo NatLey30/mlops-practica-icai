@@ -20,18 +20,15 @@ if st.button('Obtener Predicción'):
     # URL de la API de predicción (cambia esta URL si la API no está en esa url)
     api_url = os.environ.get('API_URL')
     # api_url = 'http://localhost:5000/predict'
-    st.write(api_url)
     try:
         # Enviar la petición a la API
         response = requests.post(api_url, data=json.dumps(payload), headers={'Content-Type': 'application/json'})
-        st.write(response.status_code)
         # Verificar si la petición fue exitosa
         if response.status_code == 200:
             prediction_result = response.json().get('prediction')
             # Mapear el resultado numérico a una especie
             species_map = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
             predicted_species = species_map.get(prediction_result, 'Desconocida')
-            st.write(predicted_species)
             st.success(f"La predicción es: **{predicted_species}**")
         else:
             st.error(f"Error en la petición: {response.status_code} - {response.text}")
